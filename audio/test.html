@@ -1,0 +1,48 @@
+<html>
+
+<head>
+	<title> basic jquery!! </title>
+</head>
+<body>
+
+	<div class="row">
+		<div class="button group">
+			<button id="btn1">button 1</button>
+			<button id="btn2">button 2</button>
+			<button id="btn3">button 3</button>
+			<button id="btn4">button 4</button>
+		</div>
+		
+		<div class="paragraph">
+			<p >this is a sentence</p>
+			<p>this is another sentence</p>
+		
+		</div>
+	</div>
+
+	<script src="jquery.js"></script>
+	<script>
+		$(function(){
+			$("#btn4").on('click',function(){
+				$(".paragraph").css({color:"red"});
+			});
+			
+			$("#btn1").on('click',function(){
+			
+				$("audio")[0].play();
+				
+			});
+			
+			$("#btn2").on("click",function(){
+				$("audio")[0].pause();
+				//functions like first and last will return indexed objects
+			});
+		});
+	
+	</script>
+	
+	<audio src="audio.mp3" type="audio/mpeg"> your browser does not support html5 audio</audio>
+</body>
+
+
+</html>
