@@ -39,16 +39,17 @@
 				var $slider = $("#slider .slides");
 
 				setInterval(function(){
-					if( $slider.css("margin-left") <= ( (-720)*5 )){
-
-						$slider.animate( {"margin-left": " +=(720)*5 "} , 1000 );
+					//console.log($slider.css("margin-left")<-720);
+					if( parseInt( $slider.css("margin-left") ) <= ( (-720)*5 )){
+						
+						$slider.animate( {"margin-left": "+="+(720*5)} , 500 );
 					}else{
 
 						$slider.animate( {"margin-left": "-=720"} , 1000 );
 					}
 
-					console.log($slider.css("margin-left"));					
-				},3000);
+										
+				},2000);
 
 		});
 	</script>
@@ -66,7 +67,7 @@
                     <li class="slide slide3">slide3</li>
                     <li class="slide slide4">slide4</li>
                     <li class="slide slide5">slide5</li>
-                    <li class="slide slide1">slide1</li>
+                    <li class="slide slide6">slide6</li>
                 </ul>
             </div>
 
